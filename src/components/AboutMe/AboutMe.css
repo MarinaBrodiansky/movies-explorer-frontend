@@ -1,5 +1,5 @@
 .about-me {
-  padding: 110px 70px 110px 70px;
+  padding: 110px 70px 100px 70px;
 }
 
 .about-me__title {
@@ -47,7 +47,7 @@
 
 .about-me__bio {
   display: block;
-  margin-bottom: 99px;
+  margin-bottom: 90px;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;

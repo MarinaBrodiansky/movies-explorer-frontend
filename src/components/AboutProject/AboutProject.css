@@ -128,7 +128,7 @@
   .about__description-blocks {
     flex-direction: column;
     gap: 56px;
-    margin-bottom: 45px;
+    margin-bottom: 53px;
   }
 
   .about__description-block {
@@ -137,7 +137,7 @@
 
   .about__description-block h3 {
     font-size: 18px;
-    line-height: 22px;
+    line-height: 21px;
     margin-bottom: 16px;
   }
 
