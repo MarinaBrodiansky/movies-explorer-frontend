@@ -1,0 +1,138 @@
+.register__container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 70px auto 0;
+  padding-bottom: 70px;
+  width: 396px;
+}
+
+.register__header {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.register__logo {
+  width: 38px;
+  height: 38px;
+  margin-bottom: 40px;
+}
+
+.register__title {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.register__form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.register__label {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: #a0a0a0;
+  margin-bottom: 10px;
+}
+
+.register__input {
+  background-color: transparent;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  color: #000000;
+  border: none;
+  border-bottom: 1px solid #a0a0a0;
+  /* width: calc(100% - 30px); */
+  padding: 0;
+  margin-bottom: 4px;
+  outline: none;
+}
+
+.register__error {
+  height: 12px;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: #ee3465;
+  margin-bottom: 12px;
+}
+
+.register__button {
+  background-color: #2be080;
+  border: none;
+  border-radius: 3px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  width: 100%;
+  text-align: center;
+  padding: 13px 0 15px;
+  margin-top: 134px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.register__button:not([disabled]):hover {
+  opacity: 0.8;
+}
+
+.register__button:disabled {
+  background-color: #a0a0a0;
+}
+
+.register__bottom {
+  color: #a0a0a0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.register__link {
+  color: #2be080;
+  margin-left: 6px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .register__header {
+    margin-top: 170px;
+  }
+
+}
+
+@media screen and (max-width: 420px) {
+  .register__container {
+    min-width: 260px;
+    width: calc(100% - 60px);
+    margin: 56px auto 0;
+    padding-bottom: 30px;
+  }
+
+  .register__header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 145px;
+  }
+
+  .register__logo {
+    margin-bottom: 50px;
+  }
+
+  .register__button {
+    margin-top: 157px;
+    margin-bottom: 14px;
+  }
+}

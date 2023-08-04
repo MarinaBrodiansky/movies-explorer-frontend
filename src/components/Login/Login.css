@@ -1,0 +1,135 @@
+.login__container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 70px auto 0;
+  width: 396px;
+}
+
+.login__header {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.login__logo {
+  width: 38px;
+  height: 38px;
+  margin-bottom: 40px;
+}
+
+.login__title {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.login__label {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: #A0A0A0;
+  margin-bottom: 10px;
+}
+
+.login__input {
+  background-color: transparent;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  color: #000000;
+  border: none;
+  border-bottom: 1px solid #A0A0A0;
+  /* width: calc(100% - 30px); */
+  padding: 0;
+  margin-bottom: 4px;
+  outline: none;
+}
+
+.login__error {
+  height: 12px;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: #EE3465;
+  margin-bottom: 4px;
+}
+
+.login__button {
+  background-color: #2BE080;
+  border: none;
+  border-radius: 3px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #FFFFFF;
+  width: 100%;
+  text-align: center;
+  padding: 13px 0 15px;
+  margin-top: 195px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.login__button:not([disabled]):hover {
+  opacity: 0.8;
+}
+
+.login__button:disabled {
+  background-color: #A0A0A0;
+}
+
+.login__bottom {
+  color: #A0A0A0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.login__link {
+  color: #2BE080;
+  margin-left: 6px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .login__container {
+    margin-top: 232px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .login__container {
+    min-width: 260px;
+    width: calc(100% - 60px);
+    margin-top: 56px;
+    padding-bottom: 30px;
+  }
+
+  .login__header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 80px;
+  }
+
+  .login__logo {
+    margin-bottom: 50px;
+  }
+
+  .login__button {
+    margin-top: 267px;
+    margin-bottom: 14px;
+  }
+}

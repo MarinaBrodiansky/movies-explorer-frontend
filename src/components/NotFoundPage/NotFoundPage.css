@@ -1,0 +1,64 @@
+.page__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  height: 100%;
+}
+
+.page__info-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+.page__status {
+  font-weight: 400;
+  font-size: 140px;
+  line-height: 169px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.page__notfound {
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+}
+
+.page__go-back-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #FF6838;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  transition: 0.3s ease;
+  position: absolute;
+  bottom: 60px;
+}
+
+.page__go-back-btn:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 420px) {
+  .page__status {
+    font-size: 80px;
+    line-height: 97px;
+    margin-bottom: 10px;
+  }
+
+  .page__notfound {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .page__go-back-btn {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
