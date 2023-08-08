@@ -26,7 +26,7 @@
 
 .about-me__name {
   display: block;
-  margin-bottom: 18px;
+  margin: 0 0 18px 0;
   font-style: normal;
   font-weight: 400;
   font-size: 50px;
@@ -62,6 +62,7 @@
   color: #000000;
   text-decoration: none;
   transition: 0.3s ease;
+  cursor: pointer;
 }
 
 .about-me__link:first-of-type {
@@ -105,17 +106,22 @@
     width: 255px;
     height: 307px;
   }
+
+  .about-me__info {
+    width: 60%;
+  }
 }
 
 @media screen and (max-width: 480px) {
   .about-me {
-    padding: 70px 14px;
+    padding: 73px 14px;
   }
 
   .about-me__title {
     font-size: 18px;
     line-height: 22px;
     padding-bottom: 28px;
+    margin: 0 0 63px 0;
   }
 
   .about-me__content {

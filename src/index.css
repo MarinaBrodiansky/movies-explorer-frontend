@@ -16,3 +16,7 @@ body {
   flex-direction: column;
   font-family: "Inter", Helvetica, Arial, sans-serif;
 }
+/* 
+* {
+  outline: 1px solid red;
+} */

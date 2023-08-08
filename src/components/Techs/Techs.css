@@ -47,7 +47,7 @@
   margin: 0 auto;
   padding: 0;
   justify-content: center;
-  column-gap: 10px;
+  gap: 10px;
 }
 
 .techs__icon {
@@ -67,7 +67,7 @@
 
 @media screen and (max-width: 768px) {
   .techs {
-    padding: 90px 50px;
+    padding: 88px 50px;
   }
 
   .techs__title {
@@ -83,11 +83,35 @@
     font-size: 12px;
     line-height: 18px;
   }
+
+  .techs__icon {
+    padding: 21px 0;
+    min-width: 84px;
+    font-size: 14px;
+    letter-spacing: -0.48px;
+  }
+
+  .techs__list {
+    display: grid;
+    grid-template-columns: repeat(7, 84px);
+    grid-template-rows: repeat(1, 57px);
+    margin: 0 auto;
+    padding: 0;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .techs__list {
+    grid-template-columns: repeat(2, 84px);
+    grid-template-rows: repeat(4, 57px);
+  }
 }
 
 @media screen and (max-width: 420px) {
   .techs {
-    padding: 63px 14px 70px 14px;
+    padding: 68px 14px 70px 14px;
     background-color: #ffffff;
   }
 
@@ -108,15 +132,5 @@
     font-size: 11px;
     line-height: 16px;
     margin-bottom: 50px;
-  }
-
-  .techs__list {
-    display: grid;
-    grid-template-columns: repeat(2, 84px);
-    grid-template-rows: repeat(4, 57px);
-    margin: 0 auto;
-    padding: 0;
-    justify-content: center;
-    gap: 10px;
   }
 }

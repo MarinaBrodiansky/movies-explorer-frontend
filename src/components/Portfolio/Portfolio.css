@@ -28,14 +28,15 @@
   letter-spacing: -0.04em;
   color: #000000;
   border-bottom: 1px solid #E8E8E8;
-  display: flex;
-  justify-content: space-between;
-}
+  
 
 .portfolio__link {
   color: #000000;
   text-decoration: none;
   transition: 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+}
 }
 
 .portfolio__link:hover {
@@ -52,7 +53,16 @@
   }
 
   .portfolio__projects li {
-    font-size: 28px;
+    font-size: 28px;    
+  }
+
+  .portfolio__projects {
+    gap: 20px;
+  }
+  
+
+  .portfolio__list {
+    padding-bottom: 19px;
   }
 }
 

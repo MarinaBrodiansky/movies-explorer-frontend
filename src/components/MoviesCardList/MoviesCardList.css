@@ -9,25 +9,26 @@
   grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
   column-gap: 24px;
   max-width: 1140px;
-  row-gap: 58px;
+  row-gap: 30px;
   justify-content: center;
   padding: 0;
-  margin: 50px auto;
+  margin: 70px auto;
 }
 
 .cards__button {
   width: 100%;
   max-width: 320px;
-  border: none;
+  border: #E8E8E8 solid 1px;
   border-radius: 6px;
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
-  background-color: #F9F9F9;
+  background-color: #FFFFFF;
   padding: 11px 0 9px;
   cursor: pointer;
   transition: .3s ease;
-  margin: 50px auto 80px auto;
+  margin: auto;
+  margin-bottom: 80px;
   
 }
 
@@ -43,17 +44,18 @@
 
 @media screen and (max-width: 768px) {
   .cards {
-    margin: 80px 30px 80px;
+    margin: 70px 30px 30px 30px;
   }
 
   .cards__list {
     grid-template-columns: repeat(auto-fit, minmax(300px, 339px));
-    row-gap: 45px;
-    margin: 20px auto;
+    row-gap: 36px;
+    column-gap: 30px;
+    margin: auto;
   }
 
 .cards__button {
-  margin: 60px auto 0 auto;
+  margin: 73px auto 59px auto
 }
 }
 
@@ -63,7 +65,12 @@
   }
 
   .cards__list {
-    row-gap: 36px;
-    margin: 50px auto;
+    row-gap: 16px;
+    margin: 50px auto 0 auto;
+  }
+
+  .cards__button {
+    max-width: 240px;
+    margin: 73px auto 25px auto;
   }
 }

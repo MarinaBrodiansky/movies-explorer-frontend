@@ -10,7 +10,7 @@
 }
 
 .navigation a:hover {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .navigation__movies {
@@ -57,6 +57,7 @@
   line-height: 16px;
   text-decoration: none;
   margin-right: 30px;
+  color: #000000;
 }
 
 .navigation__button {
@@ -103,6 +104,10 @@
   display: none;
 }
 
+.burger__button:hover {
+  opacity: 0.8;
+}
+
 .burger__button_white {
   background-image: url("../../images/burger-menu-white.svg");
 }
@@ -129,4 +134,8 @@
     padding: 5px 12px;
     font-size: 10px;
   }
+
+  .burger__button {
+    width: 30px;
+  }  
 }

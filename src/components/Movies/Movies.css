@@ -9,7 +9,7 @@
   display: flex;
   flex-direction: column;
   flex: 1;
-  margin: 30px 0 0 0;
+  margin: 0;
 }
 
 .movies__message {

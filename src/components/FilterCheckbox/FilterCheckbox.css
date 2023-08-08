@@ -57,6 +57,10 @@
 
 @media screen and (max-width: 420px){
   .filter {
-    padding-top: 30px;
+    padding-top: 25px;
+  }
+
+  .filter__label {
+    font-size: 11px;
   }
 }

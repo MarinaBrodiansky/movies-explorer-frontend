@@ -1,9 +1,10 @@
 .footer {
-  padding: 79px 70px 20px 70px;
+  padding: 59px 70px 20px 70px;
   background-color: #FAFAFA;
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
+  margin-top: auto;
 }
 
 .footer__text {
@@ -35,6 +36,8 @@
   line-height: 16px;
   display: flex;
   gap: 20px;
+  list-style: none;
+  margin: 0;  
 }
 
 .footer__link {
@@ -43,19 +46,19 @@
   transition: 0.3s ease;
 }
 
-.footer__link {
+.footer__link:hover {
   opacity: 0.7;
 }
 
 @media screen and (max-width: 768px) {
   .footer {
-    padding: 79px 30px 20px 30px;
+    padding: 59px 30px 20px 30px;
   }
 }
 
 @media screen and (max-width: 420px) {
   .footer {
-    padding: 55px 10px 20px 10px;
+    padding: 35px 10px 20px 10px;
   }
 
   .footer__text {
@@ -84,5 +87,6 @@
     text-align: center;
     gap: 12px;
     margin-bottom: 30px;
+    padding: 0;
   }
 }

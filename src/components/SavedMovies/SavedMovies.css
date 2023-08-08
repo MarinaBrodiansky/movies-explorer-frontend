@@ -9,3 +9,15 @@
   flex-direction: column;
   flex: 1;
 }
+
+@media screen and (max-width: 768px){
+  .savedMovies__content {
+    margin-bottom: 140px;
+  }
+}
+
+@media screen and (max-width: 320px){
+  .savedMovies__content {
+    margin-bottom: 115px;
+  }
+}

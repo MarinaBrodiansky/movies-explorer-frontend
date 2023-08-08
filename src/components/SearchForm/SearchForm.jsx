@@ -1,32 +1,28 @@
-import "./SearchForm.css";
-import FilterCheckbox from "../FilterCheckbox/FilterCheckbox";
-import find from "../../images/find.svg";
+import './SearchForm.css';
+import FilterCheckbox from '../FilterCheckbox/FilterCheckbox';
+import find from '../../images/find.svg';
 
 const SearchForm = () => {
   return (
-    <section className="search">
+    <section className='search'>
       <form
-        className="search__form form"
-        name="search-saved-movie-form"
+        className='search__form form'
+        name='search-saved-movie-form'
         onSubmit={() => {}}
         noValidate
       >
         <input
-          type="text"
-          placeholder="Фильм"
-          className="search__input"
+          type='text'
+          placeholder='Фильм'
+          className='search__input'
           required
-          name="searchRequest"
-          value={""}
-          onChange={() => {}}
+          name='searchRequest'
         />
-        <button type="submit" className="search__button">
-          <img src={find} alt="find" />
+        <button type='submit' className='search__button'>
+          <img src={find} alt='кнопка поиска' />
         </button>
         <FilterCheckbox isMovieFilter={() => {}} onFilter={() => {}} />
-      </form>
-
-      <div className="search__line" />
+      </form>      
     </section>
   );
 };

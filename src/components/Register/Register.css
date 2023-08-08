@@ -19,6 +19,10 @@
   margin-bottom: 40px;
 }
 
+.register__logo:hover {
+  opacity: 0.8;
+}
+
 .register__title {
   margin: 0;
   padding: 0;
@@ -53,6 +57,12 @@
   padding: 0;
   margin-bottom: 4px;
   outline: none;
+}
+
+.register__input:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 2px 2px #555;
 }
 
 .register__error {
@@ -105,7 +115,7 @@
 
 @media screen and (max-width: 768px) {
   .register__header {
-    margin-top: 170px;
+    margin-top: 160px;
   }
 
 }
@@ -114,7 +124,7 @@
   .register__container {
     min-width: 260px;
     width: calc(100% - 60px);
-    margin: 56px auto 0;
+    margin: 0 auto 0;
     padding-bottom: 30px;
   }
 
@@ -124,15 +134,20 @@
     width: 100%;
     align-items: center;
     margin-top: 60px;
-    margin-bottom: 145px;
+    margin-bottom: 80px;
   }
 
   .register__logo {
-    margin-bottom: 50px;
+    margin-bottom: 45px;
   }
 
   .register__button {
-    margin-top: 157px;
+    margin-top: 217px;
     margin-bottom: 14px;
+    font-size: 12px;
+  }
+
+  .register__bottom {
+    font-size: 12px;
   }
 }

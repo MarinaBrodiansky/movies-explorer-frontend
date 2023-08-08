@@ -23,7 +23,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between;  
 }
 
 .burger__close-btn {
@@ -36,6 +36,11 @@
   top: 23px;
   right: 23px;
   padding: 0;
+  cursor: pointer;
+}
+
+.burger__close-btn:hover {
+  opacity: 0.8;
 }
 
 .burger__menu {
@@ -43,7 +48,7 @@
   flex-direction: column;
   align-items: center;
   gap: 22px;
-  margin-top: 90px;
+  margin-top: 160px;
 }
 
 .burger-link {
@@ -84,5 +89,20 @@
 @media screen and (min-width: 769px) {
   .burger {
     display: none;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .burger__container {
+    width: 100%;
+  }
+
+  .burger__menu {
+    margin-top: 144px;
+  }
+
+  .burger__close-btn {
+    top: 13px;
+    right: 13px;
   }
 }

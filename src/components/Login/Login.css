@@ -18,6 +18,10 @@
   margin-bottom: 40px;
 }
 
+.login__logo:hover {
+  opacity: 0.8;
+}
+
 .login__title {
   margin: 0;
   padding: 0;
@@ -52,6 +56,12 @@
   padding: 0;
   margin-bottom: 4px;
   outline: none;
+}
+
+.login__input:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 2px 2px #555;
 }
 
 .login__error {
@@ -102,6 +112,10 @@
   text-decoration: none;
 }
 
+.login__link:hover {
+  opacity: 0.7;
+}
+
 @media screen and (max-width: 768px) {
   .login__container {
     margin-top: 232px;
@@ -129,7 +143,12 @@
   }
 
   .login__button {
-    margin-top: 267px;
+    margin-top: 287px;
     margin-bottom: 14px;
+    font-size: 12px;
+  }
+
+  .login__bottom {
+    font-size: 12px;
   }
 }
