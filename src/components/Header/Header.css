@@ -1,7 +1,7 @@
 .header {
-  padding: 18px 70px;
+  padding: 14px 70px;
   display: flex;
-  align-items: center;
+  align-items: center; 
 }
 
 .header__logo {
@@ -23,6 +23,6 @@
 
 @media screen and (max-width: 420px) {
   .header {
-    padding: 14px 18px;
+    padding: 18px 14px;
   }
 }

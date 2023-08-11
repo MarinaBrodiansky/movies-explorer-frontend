@@ -1,23 +1,23 @@
-.savedMovies__page {
+/* .saved-movies__page {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
+} */
 
-.savedMovies__content {
+.saved-movies__content {
   display: flex;
   flex-direction: column;
   flex: 1;
 }
 
 @media screen and (max-width: 768px){
-  .savedMovies__content {
+  .saved-movies__content {
     margin-bottom: 140px;
   }
 }
 
 @media screen and (max-width: 320px){
-  .savedMovies__content {
+  .saved-movies__content {
     margin-bottom: 115px;
   }
 }

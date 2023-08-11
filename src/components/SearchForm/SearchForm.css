@@ -25,11 +25,13 @@
   font-size: 14px;
   line-height: 1.29;
   color: #a0a0a0;
-  border: none;
-  /* height: 90%; */
+  border: none; 
   outline: none;
   opacity: 0.8;
-  background: transparent;
+  background: url("data:image/svg+xml,%3Csvg width=%2714%27 height=%2714%27 viewBox=%270 0 13 14%27 fill=%27none%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath fill-rule=%27evenodd%27 clip-rule=%27evenodd%27 d=%27M7.79268 8.2638C6.36075 9.69572 4.03915 9.69572 2.60723 8.2638C1.1753 6.83188 1.1753 4.51027 2.60723 3.07835C4.03915 1.64643 6.36075 1.64643 7.79268 3.07835C9.2246 4.51027 9.2246 6.83188 7.79268 8.2638ZM8.23306 9.64676C6.27283 11.1462 3.45724 10.9994 1.66442 9.20661C-0.288204 7.25399 -0.288204 4.08816 1.66442 2.13554C3.61704 0.182918 6.78286 0.182918 8.73549 2.13554C10.5282 3.92829 10.675 6.74371 9.17584 8.70392L12.7425 12.2706L11.7997 13.2134L8.23306 9.64676Z%27 fill=%27%23959595%27/%3E%3C/svg%3E%0A") no-repeat 4px 11px;
+  padding-left: 38px;
+  height: 34px;
+  margin-right: 16px;
   }
 
   .search__input::placeholder {
@@ -47,14 +49,14 @@ textarea:focus {
   background-color: #2be080;
   border: none;
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
+  width: 34px;
+  height: 34px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   transition: 0.3s ease;
-  margin: 0px 59px 0px 0px;
+  margin: 0px 35px 0px 0px;
 }
 
 .search__button:hover {
@@ -72,15 +74,15 @@ textarea:focus {
   }
 
   .search__button {
-    margin: 0px 39px 0px 0px;
+    margin: 0px 15px 0px 0px;
     width: 38px;
   }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 520px) {
   .search {
-    margin: 80px 10px 0 10px;
-    padding-bottom: 85px;
+    margin: 75px 10px 0 10px;
+    padding-bottom: 80px;
   }
 
   .search__form {
@@ -89,6 +91,7 @@ textarea:focus {
     margin-bottom: 30px;
     border: none;
     position: relative;
+    padding: 0 19px 0 17px;
   }
 
   .search__input {
@@ -97,16 +100,23 @@ textarea:focus {
     border-radius: 8px;
     height: 72px;
     padding: 25px 10px 25px 25px;
-    margin-bottom: 26px;
+    margin-bottom: 0;
+    margin-right: 0;
     background: #f9f9f9;    
   }
 
   .search__button {
+    /* Без абсолютного позиционирования не получается у меня, будет совершенно не так как в макете ((( */
     position: absolute;
     top: 30%;
     right: 20px;
     margin: 0;
     width: 34px;
     height: 34px;
+  }
+
+  .search__input::placeholder {
+    font-size: 14px;
+    line-height: 1.29;
   }
 }

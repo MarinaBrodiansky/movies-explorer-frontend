@@ -1,4 +1,4 @@
-.login__container {
+.login {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -16,6 +16,7 @@
   width: 38px;
   height: 38px;
   margin-bottom: 40px;
+  cursor: pointer;
 }
 
 .login__logo:hover {
@@ -70,7 +71,7 @@ textarea:focus {
   font-size: 10px;
   line-height: 12px;
   color: #EE3465;
-  margin-bottom: 4px;
+  margin-bottom: 15px;
 }
 
 .login__button {
@@ -117,13 +118,13 @@ textarea:focus {
 }
 
 @media screen and (max-width: 768px) {
-  .login__container {
+  .login {
     margin-top: 232px;
   }
 }
 
 @media screen and (max-width: 420px) {
-  .login__container {
+  .login {
     min-width: 260px;
     width: calc(100% - 60px);
     margin-top: 56px;
@@ -143,7 +144,7 @@ textarea:focus {
   }
 
   .login__button {
-    margin-top: 287px;
+    margin-top: 280px;
     margin-bottom: 14px;
     font-size: 12px;
   }

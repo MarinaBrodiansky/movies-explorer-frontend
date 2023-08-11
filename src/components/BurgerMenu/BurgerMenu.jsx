@@ -13,7 +13,8 @@ const BurgerMenu = ({ onClose }) => {
             onClick={() => onClose()}
           />
           <nav>
-            <div className="burger__menu">
+            <ul className="burger__menu">
+              <li>
               <NavLink
                 exact
                 to="/"
@@ -22,6 +23,8 @@ const BurgerMenu = ({ onClose }) => {
               >
                 Главная
               </NavLink>
+              </li>
+              <li>
               <NavLink
                 to="/movies"
                 className="burger-link"
@@ -29,6 +32,8 @@ const BurgerMenu = ({ onClose }) => {
               >
                 Фильмы
               </NavLink>
+              </li>
+              <li>
               <NavLink
                 to="/saved-movies"
                 className="burger-link"
@@ -36,7 +41,8 @@ const BurgerMenu = ({ onClose }) => {
               >
                 Сохранённые фильмы
               </NavLink>
-            </div>
+              </li>
+            </ul>
           </nav>
           <Link to="/profile">
             <button className="burger__button_account" type='button'>Аккаунт</button>

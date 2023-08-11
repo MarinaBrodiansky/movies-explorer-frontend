@@ -1,8 +1,8 @@
-.profile__container {
+.profile {
   display: flex;
   flex-direction: column;
-  margin: 64px auto 0;
-  width: 410px;
+  margin: 70px auto 0;
+  max-width: 410px;
 }
 
 .profile__title {
@@ -16,7 +16,7 @@
   margin-bottom: 107px;
 }
 
-.profile___form {
+.profile__form {
   width: 100%;
   font-size: 11px;
   line-height: 13px;
@@ -86,7 +86,7 @@ textarea:focus {
 }
 
 @media screen and (max-width: 768px) {
-  .profile__container {
+  .profile {
     margin: 230px auto 0;
     padding-bottom: 30px;
   }
@@ -100,20 +100,20 @@ textarea:focus {
   }
 }
 
-@media screen and (max-width: 320px) {
-  .profile__container {
+@media screen and (max-width: 440px) {
+  .profile {
     /* min-width: 260px; */
     width: calc(100% - 60px);
-    margin: 70px auto 0;
+    margin: 63px auto 0;
     padding-bottom: 40px;
   }
 
   .profile__title {
-    margin-bottom: 70px;
+    margin-bottom: 65px;
   }
 
   .profile__bottom {
-    margin-top: 359px;
+    margin-top: 363px;
     font-size: 12px;
   }
 }

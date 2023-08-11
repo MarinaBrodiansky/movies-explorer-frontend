@@ -1,5 +1,5 @@
 .footer {
-  padding: 59px 70px 20px 70px;
+  padding: 79px 70px 20px 70px;
   background-color: #FAFAFA;
   display: flex;
   flex-direction: column;
@@ -14,7 +14,7 @@
   line-height: 16px;
   text-align: center;
   color: #A0A0A0;
-  padding: 20px 0;
+  padding-bottom: 20px;
   border-bottom: 1px solid #E8E8E8;
   margin-bottom: 20px;
 }

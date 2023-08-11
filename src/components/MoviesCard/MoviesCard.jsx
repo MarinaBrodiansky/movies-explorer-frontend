@@ -3,7 +3,7 @@ import cross from '../../images/cross.svg'
 
 const MoviesCard = ({ movie, isShowSaveBtn = true, isShowDeleteBtn = false }) => {
   return (
-    <div className='card'>
+    <li className='card'>
       <div className='card__description'>
         <h2 className='card__name'>{movie.name}</h2>
         <span className='card__duration'>2 hours</span>
@@ -17,7 +17,7 @@ const MoviesCard = ({ movie, isShowSaveBtn = true, isShowDeleteBtn = false }) =>
       {isShowDeleteBtn && <button
         type='button'
         className="card__button card__delete"
-      ><img src={cross} alt="cross" /></button>}
+      ><img src={cross} alt="кнопка удалить" /></button>}
       <a className='card__link' target='_blank' href='/#'>
         <img
           src={movie.img}
@@ -25,7 +25,7 @@ const MoviesCard = ({ movie, isShowSaveBtn = true, isShowDeleteBtn = false }) =>
           className='card__image'
         />
       </a>
-    </div>
+    </li>
   );
 };
 

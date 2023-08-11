@@ -67,7 +67,7 @@
 
 @media screen and (max-width: 768px) {
   .techs {
-    padding: 88px 50px;
+    padding: 90px 50px;
   }
 
   .techs__title {
@@ -111,7 +111,7 @@
 
 @media screen and (max-width: 420px) {
   .techs {
-    padding: 68px 14px 70px 14px;
+    padding: 73px 14px 70px 14px;
     background-color: #ffffff;
   }
 
@@ -119,11 +119,12 @@
     font-size: 18px;
     line-height: 22px;
     margin-bottom: 60px;
-    padding-bottom: 28px;
+    padding-bottom: 26px;
+    padding-left: 5px;
   }
 
   .techs__large-title {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
     font-size: 30px;
     line-height: 36px;
   }

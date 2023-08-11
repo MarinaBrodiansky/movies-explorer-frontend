@@ -3,7 +3,7 @@
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.8s linear;
-  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
   justify-content: center;
   position: fixed;
   top: 0;
@@ -12,7 +12,7 @@
   left: 0;
 }
 
-.popup_opened {
+.popup__opened {
   opacity: 1;
   visibility: visible;
 }
@@ -35,7 +35,6 @@
   .popup__container {
     max-width: 282px;
     padding: 25px 22px;
-
   }
 }
 

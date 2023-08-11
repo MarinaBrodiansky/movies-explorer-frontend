@@ -1,9 +1,9 @@
-.page__container {
+.page {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-  height: 100%;
+  /* height: 100%;   */
 }
 
 .page__info-block {
@@ -11,6 +11,7 @@
   flex-direction: column;
   align-items: center;
   margin: auto;
+  padding-top: 152px;
 }
 
 .page__status {
@@ -37,15 +38,23 @@
   font-size: 14px;
   line-height: 17px;
   transition: 0.3s ease;
-  position: absolute;
-  bottom: 60px;
+  padding-top: 184px;
 }
 
 .page__go-back-btn:hover {
   opacity: 0.8;
 }
+@media screen and (max-width: 768px) {
+  .page__info-block {
+    padding-top: 314px;
+  }
+}
 
 @media screen and (max-width: 420px) {
+  .page__info-block {
+    padding-top: 275px;
+  }
+
   .page__status {
     font-size: 80px;
     line-height: 97px;
@@ -60,5 +69,6 @@
   .page__go-back-btn {
     font-size: 12px;
     line-height: 15px;
+    padding-top: 285px;
   }
 }
