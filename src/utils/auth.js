@@ -84,7 +84,7 @@ class Auth {
   }
 }
 
-export const auth = (token) => new Auth({
+export const auth = (token = '') => new Auth({
   url: process.env.REACT_APP_API_URL || 'http://localhost:3000',
   headers: {
     'Content-Type': 'application/json',
