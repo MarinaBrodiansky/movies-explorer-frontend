@@ -1,12 +1,33 @@
-import "./Profile.css";
-import { Link } from "react-router-dom";
+import './Profile.css'
+import { useFormValidate } from '../../hooks/useFormValidate'
+import { validateName, validateEmail } from '../../utils/validate'
+import { useEffect, useState } from 'react'
 
-const Profile = () => {
+
+const Profile = ({ user, onUpdateUser, onSignOut, requestErrors }) => {
+  const [edit, setStateEdit] = useState(false)
+  const { values, handleChange, errors, isValid, setValues, setIsValid } =
+    useFormValidate()
+
+  useEffect(() => {
+    if (user) {
+      setValues(user)
+      setIsValid(true)
+    }
+  }, [user, setValues, setIsValid])
+
   return (
     <>
       <section className="profile">
-        <h1 className="profile__title">Привет, !</h1>
-        <form className="profile__form form">
+        <h1 className="profile__title">Привет, {values.name}!</h1>
+        <form
+          onSubmit={e => {
+            e.preventDefault()
+            onUpdateUser(values)
+            setStateEdit(false)
+          }}
+          className="profile__form form"
+        >
           <div className="profile__value">
             <label className="profile__label">Имя</label>
             <input
@@ -15,9 +36,14 @@ const Profile = () => {
               className="profile__input"
               minLength={2}
               maxLength={40}
-              placeholder="Имя"
+              disabled={!edit}
+              value={values.name || ''}
+              onChange={handleChange}
               required
             />
+          </div>
+          <div className="form__error">
+            {errors.name || validateName(values.name).message}
           </div>
           <div className="profile__line"></div>
           <div className="profile__value">
@@ -27,21 +53,57 @@ const Profile = () => {
               name="email"
               className="profile__input"
               placeholder="email"
+              disabled={!edit}
+              value={values.email || ''}
+              onChange={handleChange}
               required
             />
           </div>
+          <div className="form__error">
+            {errors.email || validateEmail(values.email).message}
+          </div>
+          <div className="form__error">
+            {Object.keys(requestErrors.profile).length
+              ? requestErrors.profile.message === 'Validation failed'
+                ? requestErrors.profile.validation.body.message
+                : requestErrors.profile.message
+              : ''}
+          </div>
           <div className="profile__bottom">
-            <button type="button" className="profile__edit">
-              Редактировать
-            </button>
-            <Link className="profile__logout" to="/">
-              Выйти из аккаунта
-            </Link>
+            {edit ? (
+              <button
+                type="submit"
+                className="profile__button-save"
+                disabled={
+                  !isValid ||
+                  (user.name === values.name && user.email === values.email) ||
+                  validateName(values.name).invalid ||
+                  validateEmail(values.email).invalid
+                }
+              >
+                Сохранить
+              </button>
+            ) : (
+              <>
+                <button
+                  onClick={e => {
+                    e.preventDefault()
+                    setStateEdit(true)
+                  }}
+                  className="profile__button-edit"
+                >
+                  Редактировать
+                </button>
+                <button onClick={onSignOut} className="profile__logout">
+                  Выйти из аккаунта
+                </button>
+              </>
+            )}
           </div>
         </form>
       </section>
     </>
-  );
-};
+  )
+}
 
-export default Profile;
+export default Profile

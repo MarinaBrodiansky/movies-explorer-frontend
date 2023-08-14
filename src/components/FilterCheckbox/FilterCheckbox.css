@@ -1,13 +1,16 @@
 .filter {
+  flex-grow: 0;
+  align-self: center;
+  border-left: 1px solid #dedede;
+  margin: 0px 30px 0px 0;
+  padding-left: 29px;
+  height: 40px;
   display: flex;
   align-items: center;
-  align-self: center;
-  padding-left: 26px;
-  border-left: 1px solid rgba(170, 170, 170, 0.2);
 }
 
 .filter__checkbox {
-  margin-right: 14px;
+  margin-right: 13px;
   width: 36px;
   height: 20px;
   outline: none;
@@ -57,13 +60,37 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 768px){
+  .filter {
+    margin: 0;
+    padding-left: 19px;
+  }
+  .filter__checkbox {
+    margin-right: 14px;
+  }
+}
+
+@media screen and (max-width: 670px){
+  .break {
+    flex-basis: 100%;
+    height: 0;
+  }
+}
+
 @media screen and (max-width: 420px){
   .filter {
-    padding: 45px 0 0 0;
+    padding: 47px 64px 44px;
+    margin: 0;
+    height: unset;
     border-left: none;
+    width: 100%;
   }
 
   .filter__label {
     font-size: 11px;
+  }
+
+  .filter__checkbox {
+    margin-right: 13px;
   }
 }

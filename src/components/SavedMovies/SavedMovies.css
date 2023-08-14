@@ -1,8 +1,6 @@
-/* .saved-movies__page {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-} */
+.saved-movies {
+  min-height: 805px;
+}
 
 .saved-movies__content {
   display: flex;
@@ -10,14 +8,20 @@
   flex: 1;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
   .saved-movies__content {
     margin-bottom: 140px;
   }
+  .saved-movies {
+    min-height: 1072px;
+  }
 }
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: 320px) {
   .saved-movies__content {
     margin-bottom: 115px;
+  }
+  .saved-movies {
+    min-height: 940px;
   }
 }

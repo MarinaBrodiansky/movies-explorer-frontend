@@ -1,57 +1,71 @@
-import MoviesCardList from "../MoviesCardList/MoviesCardList";
-import SearchForm from "../SearchForm/SearchForm";
+import { useEffect, useState } from 'react'
+import {
+  FILTRED_MOVIES_KEY,
+  MOVIES_PAGE_KEY,
+  MOVIES_SEARCH_KEY,
+  RESET_SEARCH_STATE,
+} from '../../constants'
+import { parseJSON } from '../../utils/helpers'
+import { filterSearch } from '../../utils/search'
+import MoviesCardList from '../MoviesCardList/MoviesCardList'
+import SearchForm from '../SearchForm/SearchForm'
+import './Movies.css'
 
-import "./Movies.css";
+const Movies = ({
+  movies,
+  savedMovies,
+  onSaveMovie,
+  onDeleteMovie,
+  requestErrors,
+}) => {
+  const [filtredMovies, setFiltredMovies] = useState(
+    parseJSON(localStorage.getItem(FILTRED_MOVIES_KEY), []),
+  )
+  const [search, setSearch] = useState(
+    parseJSON(localStorage.getItem(MOVIES_SEARCH_KEY), RESET_SEARCH_STATE),
+  )
+  const [page, setPage] = useState(
+    Number(localStorage.getItem(MOVIES_PAGE_KEY)),
+  )
 
-const movies = [
-  {
-    name: "movie",
-    duration: "movie",
-    img: "https://www.thenews.com.pk/assets/uploads/updates/2022-12-19/1021612_814112_Untitled-133_updates.jpg",
-    isSaved: true,
-  },
-  {
-    name: "movie",
-    duration: "movie",
-    img: "https://www.thenews.com.pk/assets/uploads/updates/2022-12-19/1021612_814112_Untitled-133_updates.jpg",
-    isSaved: false,
-  },
-  {
-    name: "movie",
-    duration: "movie",
-    img: "https://www.thenews.com.pk/assets/uploads/updates/2022-12-19/1021612_814112_Untitled-133_updates.jpg",
-    isSaved: true,
-  },
-  {
-    name: "movie",
-    duration: "movie",
-    img: "https://www.thenews.com.pk/assets/uploads/updates/2022-12-19/1021612_814112_Untitled-133_updates.jpg",
-    isSaved: false,
-  },
-  {
-    name: "movie",
-    duration: "movie",
-    img: "https://www.thenews.com.pk/assets/uploads/updates/2022-12-19/1021612_814112_Untitled-133_updates.jpg",
-    isSaved: true,
-  },
-];
+  useEffect(() => {
+    localStorage.setItem(MOVIES_PAGE_KEY, page)
+  }, [page])
 
-const Movies = () => {
+  useEffect(() => {
+    localStorage.setItem(MOVIES_SEARCH_KEY, JSON.stringify(search))
+  }, [search])
+
+  useEffect(() => {
+    localStorage.setItem(FILTRED_MOVIES_KEY, JSON.stringify(filtredMovies))
+  }, [filtredMovies])
+
   return (
-    <>      
-      <section className="movies">
-        <div className="movies__content">
-          <SearchForm />
+    <section className="movies">
+      <h2 hidden="hidden">Поиск фильмов</h2>
+      <div className="movies__content">
+        <SearchForm
+          setSearchState={setSearch}
+          searchDefaultState={search}
+          onSearch={search => {
+            setPage(0)
+            filterSearch({ movies, search, setFiltredMovies })
+          }}
+        />
 
-          <MoviesCardList
-            isSavedMoviesPage={false}
-            movies={movies}
-            savedMovies={movies}
-          />
-        </div>
-      </section>     
-    </>
-  );
-};
+        <MoviesCardList
+          isSavedMoviesPage={false}
+          movies={filtredMovies}
+          page={page}
+          setPage={setPage}
+          onSaveMovie={onSaveMovie}
+          onDeleteMovie={onDeleteMovie}
+          requestErrors={requestErrors}
+          savedMovies={savedMovies}
+        />
+      </div>
+    </section>
+  )
+}
 
-export default Movies;
+export default Movies

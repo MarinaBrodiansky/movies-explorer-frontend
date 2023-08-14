@@ -1,11 +1,10 @@
 import React from "react";
-// import Header from "../Header/Header";
 import "./Promo.css";
 
 const Promo = () => {
   return (
     <>
-      <section className="promo">
+      <article className="promo">
         <div className="promo__container">
           <h1 className="promo__title">
             Учебный проект студента факультета Веб-разработки.
@@ -30,7 +29,7 @@ const Promo = () => {
             </ul>
           </nav>
         </div>
-      </section>
+      </article>
     </>
   );
 };

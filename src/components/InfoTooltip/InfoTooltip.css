@@ -3,7 +3,7 @@
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.8s linear;
-  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
   justify-content: center;
   position: fixed;
   top: 0;

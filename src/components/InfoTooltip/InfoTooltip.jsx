@@ -1,8 +1,8 @@
-import "./InfoTooltip.css";
+import './InfoTooltip.css'
 
 const InfoTooltip = ({ isOpen, onClose, message }) => {
   return (
-    <div className={`popup ${isOpen && "popup__opened"}`}>
+    <div className={`popup ${isOpen && 'popup__opened'}`}>
       <div className="popup__container">
         <button
           type="button"
@@ -12,7 +12,7 @@ const InfoTooltip = ({ isOpen, onClose, message }) => {
         <p>{JSON.stringify(message)}</p>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default InfoTooltip;
+export default InfoTooltip

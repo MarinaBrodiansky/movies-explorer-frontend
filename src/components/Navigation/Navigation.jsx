@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-import "./Navigation.css";
-import BurgerMenu from "../BurgerMenu/BurgerMenu";
+import React, { useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
+import './Navigation.css'
+import BurgerMenu from '../BurgerMenu/BurgerMenu'
 
 const Navigation = ({ loggedIn }) => {
-  const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false);
-  const location = useLocation().pathname;
+  const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false)
+  const location = useLocation().pathname
   const toggleBurgerMenu = () => {
-    setIsBurgerMenuOpen(!isBurgerMenuOpen);
-  };
+    setIsBurgerMenuOpen(!isBurgerMenuOpen)
+  }
 
   return (
     <nav className="navigation">
@@ -16,18 +16,18 @@ const Navigation = ({ loggedIn }) => {
         <>
           <ul
             className={
-              location === "/"
-                ? "navigation__movies navigation__movies_white"
-                : "navigation__movies"
+              location === '/'
+                ? 'navigation__movies navigation__movies-white'
+                : 'navigation__movies'
             }
           >
             <li>
               <Link
                 to="/movies"
                 className={
-                  location === "/movies"
-                    ? "navigation__movies-link navigation__movies-link_active"
-                    : "navigation__movies-link"
+                  location === '/movies'
+                    ? 'navigation__movies-link-active'
+                    : 'navigation__movies-link'
                 }
               >
                 Фильмы
@@ -37,15 +37,14 @@ const Navigation = ({ loggedIn }) => {
               <Link
                 to="/saved-movies"
                 className={
-                  location === "/saved-movies"
-                    ? "navigation__movies-link navigation__movies-link_active"
-                    : "navigation__movies-link"
+                  location === '/saved-movies'
+                    ? 'navigation__movies-link-active'
+                    : 'navigation__movies-link'
                 }
               >
                 Сохранённые фильмы
               </Link>
             </li>
-
           </ul>
           <ul>
             <li>
@@ -54,39 +53,43 @@ const Navigation = ({ loggedIn }) => {
               </Link>
             </li>
           </ul>
+          {!isBurgerMenuOpen ? (
+            <ul className="burger">
+              <li>
+                <button
+                  className={
+                    location === '/'
+                      ? 'burger__button burger__button-white'
+                      : 'burger__button'
+                  }
+                  onClick={toggleBurgerMenu}
+                  type="button"
+                />
+              </li>
+            </ul>
+          ) : (
+            <BurgerMenu onClose={toggleBurgerMenu} />
+          )}
         </>
       ) : (
-        <ul className="navigation__auth">
-          <li>
-            <Link to="/signup" className="navigation__link">
-              Регистрация
-            </Link>
-          </li>
-          <li>
-            <Link to="/signin" className="navigation__button">
-              Войти
-            </Link>
-          </li>
-        </ul>
+        <>
+          <ul>{/* left navigation links */}</ul>
+          <ul className="navigation__auth">
+            <li>
+              <Link to="/signup" className="navigation__link">
+                Регистрация
+              </Link>
+            </li>
+            <li>
+              <Link to="/signin" className="navigation__button">
+                Войти
+              </Link>
+            </li>
+          </ul>
+        </>
       )}
-      {loggedIn &&
-        (!isBurgerMenuOpen ? (
-          <div className="burger">
-            <button
-              className={
-                location === "/"
-                  ? "burger__button burger__button_white"
-                  : "burger__button"
-              }
-              onClick={toggleBurgerMenu}
-              type="button"
-            />
-          </div>
-        ) : (
-          <BurgerMenu onClose={toggleBurgerMenu} />
-        ))}
     </nav>
-  );
-};
+  )
+}
 
-export default Navigation;
+export default Navigation

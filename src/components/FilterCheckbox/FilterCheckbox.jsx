@@ -1,16 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './FilterCheckbox.css';
 
-const FilterCheckbox = ({ onFilter }) => {
-  const [shorts, setShorts] = useState(true);
+const FilterCheckbox = ({ checked, onChange }) => {
   return (
     <div className='filter'>
       <input
         type='checkbox'
         id='checkbox'
+        checked={checked}
+        onChange={onChange}
         className='filter__checkbox'
-        onChange={() => { setShorts(!shorts) }}
-        checked={shorts}
       />
       <label htmlFor='checkbox' className='filter__label'>
         Короткометражки

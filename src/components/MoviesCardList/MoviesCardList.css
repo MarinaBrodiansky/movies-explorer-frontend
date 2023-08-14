@@ -1,6 +1,6 @@
 .cards {
   display: block;
-  margin: 10px 70px 30px 70px;
+  margin: 0 70px 0 70px;
   text-align: center;
 }
 
@@ -9,7 +9,7 @@
   grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
   column-gap: 24px;
   max-width: 1140px;
-  row-gap: 30px;
+  row-gap: 27px;
   justify-content: center;
   padding: 0;
   margin: 70px auto;
@@ -28,40 +28,51 @@
   cursor: pointer;
   transition: .3s ease;
   margin: auto;
-  margin-bottom: 50px;
-  margin-top: 15px;
 }
 
 .cards__button:hover {
   opacity: 0.8;
+  background: #2be080;
+  color: #ffff;
 }
 
-@media screen and (max-width: 997px) {
-  .cards {
-    margin: 0 30px 50px;
-  }
+.cards__not-found {
+  text-align: center;
+  grid-area: 1/2;
+}
+
+.cards__request-error {
+  display: flex;
+  line-height: 20px;
+  color: crimson;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media screen and (max-width: 768px) {
   .cards {
-    margin: 70px 30px 45px 30px;
+    display: block;
+    margin: 0 30px 0 30px;
+    text-align: center;
   }
 
   .cards__list {
     grid-template-columns: repeat(auto-fit, minmax(300px, 339px));
-    row-gap: 36px;
+    row-gap: 20px;
     column-gap: 30px;
     margin: auto;
   }
 
-.cards__button {
-  margin: 80px auto 55px auto;
-}
+  .cards__button {
+    margin: 60px auto 0 auto;
+  }
 }
 
 @media screen and (max-width: 420px) {
   .cards {
-    margin: 0 10px 100px;
+    margin: 0 10px 80px;
+    min-height: 587px;
   }
 
   .cards__list {
@@ -71,6 +82,6 @@
 
   .cards__button {
     max-width: 240px;
-    margin: 80px auto 25px auto;
+    margin: 73px auto 25px auto;
   }
 }

@@ -10,7 +10,9 @@ const Header = ({ loggedIn }) => {
       <Link to='/'>
         <img src={logo} alt='Логотип' className='header__logo' />
       </Link>
+
       <Navigation loggedIn={loggedIn} />
+
     </header>
   );
 };

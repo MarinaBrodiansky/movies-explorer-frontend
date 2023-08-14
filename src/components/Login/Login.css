@@ -15,7 +15,6 @@
 .login__logo {
   width: 38px;
   height: 38px;
-  margin-bottom: 40px;
   cursor: pointer;
 }
 
@@ -24,11 +23,11 @@
 }
 
 .login__title {
-  margin: 0;
+  margin-top: 38px;
   padding: 0;
   font-weight: 500;
   font-size: 24px;
-  line-height: 29px;
+  margin-bottom: 0;
 }
 
 .login__form {
@@ -42,21 +41,20 @@
   font-size: 10px;
   line-height: 12px;
   color: #A0A0A0;
-  margin-bottom: 10px;
+  margin-bottom: 2px;
 }
 
 .login__input {
   background-color: transparent;
   font-weight: 500;
-  font-size: 13px;
-  line-height: 16px;
+  font-size: 14px;
+  line-height: 24px;
   color: #000000;
   border: none;
   border-bottom: 1px solid #A0A0A0;
-  /* width: calc(100% - 30px); */
   padding: 0;
-  margin-bottom: 4px;
   outline: none;
+  padding-bottom: 5px;
 }
 
 .login__input:focus,
@@ -71,7 +69,7 @@ textarea:focus {
   font-size: 10px;
   line-height: 12px;
   color: #EE3465;
-  margin-bottom: 15px;
+  margin-bottom: 4px;
 }
 
 .login__button {
@@ -85,7 +83,7 @@ textarea:focus {
   width: 100%;
   text-align: center;
   padding: 13px 0 15px;
-  margin-top: 195px;
+  margin-top: 172px;
   margin-bottom: 16px;
   cursor: pointer;
   transition: 0.2s ease;
@@ -124,6 +122,16 @@ textarea:focus {
 }
 
 @media screen and (max-width: 420px) {
+  .login__title {
+    margin: 0;
+  }
+  .login__bottom {
+    font-size: 12px;
+    line-height: 17px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
   .login {
     min-width: 260px;
     width: calc(100% - 60px);
@@ -136,7 +144,7 @@ textarea:focus {
     flex-direction: column;
     width: 100%;
     align-items: center;
-    margin-bottom: 80px;
+    margin-bottom: 78px;
   }
 
   .login__logo {
@@ -144,12 +152,8 @@ textarea:focus {
   }
 
   .login__button {
-    margin-top: 280px;
+    margin-top: 260px;
     margin-bottom: 14px;
-    font-size: 12px;
-  }
-
-  .login__bottom {
     font-size: 12px;
   }
 }

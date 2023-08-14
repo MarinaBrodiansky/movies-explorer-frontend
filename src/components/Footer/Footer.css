@@ -1,10 +1,10 @@
 .footer {
-  padding: 79px 70px 20px 70px;
-  background-color: #FAFAFA;
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 0;
+  background: #fafafa;
+  padding: 59px 70px 44px;
+  font-weight: 400;
+  font-size: 13px;
   margin-top: auto;
+  line-height: 16px;
 }
 
 .footer__text {
@@ -14,7 +14,7 @@
   line-height: 16px;
   text-align: center;
   color: #A0A0A0;
-  padding-bottom: 20px;
+  padding: 20px 0;
   border-bottom: 1px solid #E8E8E8;
   margin-bottom: 20px;
 }
@@ -52,13 +52,17 @@
 
 @media screen and (max-width: 768px) {
   .footer {
-    padding: 59px 30px 20px 30px;
+    padding: 60px 25px 25px 37px;
+    margin: 0;
+    background: none;
   }
 }
 
 @media screen and (max-width: 420px) {
   .footer {
-    padding: 35px 10px 20px 10px;
+    padding: 110px 10px 20px 10px;
+    margin: 0;
+    background: none;
   }
 
   .footer__text {

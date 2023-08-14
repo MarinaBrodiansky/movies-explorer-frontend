@@ -1,50 +1,56 @@
-import MoviesCardList from '../MoviesCardList/MoviesCardList';
-import SearchForm from '../SearchForm/SearchForm';
-// import Preloader from '../Preloader/Preloader';
-import './SavedMovies.css';
+import { useEffect, useState } from 'react'
+import { MOVIES_SAVED_PAGE_KEY, RESET_SEARCH_STATE } from '../../constants'
+import { filterSearch } from '../../utils/search'
+import MoviesCardList from '../MoviesCardList/MoviesCardList'
+import SearchForm from '../SearchForm/SearchForm'
+import './SavedMovies.css'
 
-const savedMovies = [
-  {
-    name: 'movie',
-    duration: 'movie',
-    img: 'https://www.thenews.com.pk/assets/uploads/updates/2022-12-19/1021612_814112_Untitled-133_updates.jpg',
-    isSaved: true,
-  },
-  {
-    name: 'movie',
-    duration: 'movie',
-    img: 'https://www.thenews.com.pk/assets/uploads/updates/2022-12-19/1021612_814112_Untitled-133_updates.jpg',
-    isSaved: true,
-  },
-  {
-    name: 'movie',
-    duration: 'movie',
-    img: 'https://www.thenews.com.pk/assets/uploads/updates/2022-12-19/1021612_814112_Untitled-133_updates.jpg',
-    isSaved: true,
-  },  
-]
-const SavedMovies = () => {
+/**
+ * Сохранять данные поиска на странице «Сохранённые фильмы» в localStorage не требуется.
+ * При переходе пользователя на страницу сохранённых фильмов ему должны быть отображены все его фильмы.
+ */
+const SavedMovies = ({ movies, onDeleteMovie, requestErrors }) => {
+  const [filtredMovies, setFiltredMovies] = useState(movies)
+  const [search, setSearch] = useState(RESET_SEARCH_STATE)
+  const [page, setPage] = useState(
+    Number(localStorage.getItem(MOVIES_SAVED_PAGE_KEY)),
+  )
+
+  useEffect(() => {
+    setFiltredMovies(movies)
+  }, [movies])
+
+  useEffect(() => {
+    localStorage.setItem(MOVIES_SAVED_PAGE_KEY, page)
+  }, [page])
+
   return (
-    <>    
-      <section className='saved-movies'>
-         <div className='saved-movies__content'>
-          <SearchForm />
+    <>
+      <div className="saved-movies">
+        <div className="saved-movies__content">
+          <SearchForm
+            setSearchState={setSearch}
+            searchDefaultState={search}
+            onSearch={search => {
+              setPage(0)
+              filterSearch({ movies, search, setFiltredMovies })
+            }}
+          />
           <MoviesCardList
-            isSavedMoviesPage={true}
-            movies={savedMovies}
+            movies={filtredMovies}
+            page={page}
+            setPage={setPage}
+            savedMovies={movies}
             isShowSaveBtn={false}
             isShowDeleteBtn={true}
-            savedMovies={[]}
-            onDelete={() => {}}
-            isShowMoreButton={false}
+            isSavedMoviesPage={true}
+            requestErrors={requestErrors}
+            onDeleteMovie={onDeleteMovie}
           />
-         </div>
-      </section>
-          
+        </div>
+      </div>
     </>
-      
-    
-  );
-};
+  )
+}
 
-export default SavedMovies;
+export default SavedMovies

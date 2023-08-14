@@ -1,7 +1,7 @@
 .profile {
   display: flex;
   flex-direction: column;
-  margin: 70px auto 0;
+  margin: 90px auto 0;
   max-width: 410px;
 }
 
@@ -30,7 +30,11 @@
 .profile__value {
   display: flex;
   justify-content: space-between;
-  padding: 16px 0;
+  padding: 16px 0 0 0;
+}
+
+.profile .form__error {
+  padding-top: 0px;
 }
 
 .profile__label {
@@ -50,11 +54,11 @@
 .profile__input:focus,
 textarea:focus {
   outline: none;
-  box-shadow: 0 0 2px 2px #555;
+  /* box-shadow: 0 0 2px 2px #555; */
 }
 
 .profile__bottom {
-  margin-top: 204px;
+  margin-top: 186px;
   font-size: 13px;
   line-height: 16px;
   text-align: center;
@@ -63,10 +67,30 @@ textarea:focus {
   gap: 16px;
 }
 
-.profile__edit {
+.profile__button-edit {
   border: none;
   background: none;
   cursor: pointer;
+}
+
+.profile__button-save {
+  background-color: #2BE080;
+  border: none;
+  border-radius: 3px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 13px 0 15px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.profile__button-save:disabled {
+  background-color: #f8f8f8;
+  color: #c2c2c2;
+  cursor: auto;
 }
 
 .profile__edit:hover {
@@ -87,33 +111,32 @@ textarea:focus {
 
 @media screen and (max-width: 768px) {
   .profile {
-    margin: 230px auto 0;
-    padding-bottom: 30px;
+    margin: 245px auto 0;
   }
 
   .profile__title {
-    margin-bottom: 85px;
+    margin-bottom: 79px;
   }
 
   .profile__bottom {
-    margin-top: 190px;
+    margin-top: 180px;
   }
 }
 
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 320px) {
   .profile {
-    /* min-width: 260px; */
     width: calc(100% - 60px);
-    margin: 63px auto 0;
+    margin: 80px auto 0;
     padding-bottom: 40px;
   }
 
-  .profile__title {
-    margin-bottom: 65px;
-  }
-
   .profile__bottom {
-    margin-top: 363px;
+    margin-top: 346px;
     font-size: 12px;
   }
+
+  .profile__title {
+    margin-bottom: 64px;
+  }
+  
 }

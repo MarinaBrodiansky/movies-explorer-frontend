@@ -1,13 +1,15 @@
 .header {
-  padding: 14px 70px;
   display: flex;
-  align-items: center; 
+  padding: 18px 70px 0;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .header__logo {
   width: 38px;
   height: 38px;
-  margin-right: 44px;
 }
 
 .header__logo:hover {
@@ -16,13 +18,15 @@
 
 @media screen and (max-width: 768px) {
   .header {
-    padding: 18px 30px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
 
 @media screen and (max-width: 420px) {
   .header {
-    padding: 18px 14px;
+    padding-left: 14px;
+    padding-right: 14px;
   }
 }

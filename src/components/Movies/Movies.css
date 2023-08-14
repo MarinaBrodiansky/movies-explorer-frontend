@@ -1,8 +1,7 @@
 .movies {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  /* padding: 0 30px 0 30px; */
+  min-height: 1675px;
 }
 
 .movies__content {
@@ -15,4 +14,10 @@
 .movies__message {
   text-align: center;
   padding: 40px 0;
+}
+
+@media screen and (max-width: 768px){
+  .movies {
+    min-height: 1670px;
+  }
 }

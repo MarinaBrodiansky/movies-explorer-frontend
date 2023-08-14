@@ -16,28 +16,25 @@ const BurgerMenu = ({ onClose }) => {
             <ul className="burger__menu">
               <li>
               <NavLink
-                exact
+                exact="true"
                 to="/"
-                className="burger-link"
-                activeClassName="burger-link_active"
-              >
+                className={({isActive}) => isActive ? 'burger-link_active' : 'burger-link'}
+                >
                 Главная
               </NavLink>
               </li>
               <li>
               <NavLink
                 to="/movies"
-                className="burger-link"
-                activeClassName="burger-link_active"
-              >
+                className={({isActive}) => isActive ? 'burger-link_active' : 'burger-link'}
+                >
                 Фильмы
               </NavLink>
               </li>
               <li>
               <NavLink
                 to="/saved-movies"
-                className="burger-link"
-                activeClassName="burger-link_active"
+                className={({isActive}) => isActive ? 'burger-link_active' : 'burger-link'}
               >
                 Сохранённые фильмы
               </NavLink>

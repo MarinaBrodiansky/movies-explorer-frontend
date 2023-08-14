@@ -1,6 +1,12 @@
 .burger {
-  z-index: 12;
+  display: flex;
   transition: 0.3s ease;
+  flex-direction: row-reverse;
+  width: 100%;
+}
+
+div.burger {
+  z-index: 12;
 }
 
 .burger__backdrop {
@@ -47,9 +53,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 27px;
-  margin-top: 160px;
-  padding: 0;
+  gap: 22px;
+  margin-top: 160px !important;
+  padding-left: 0 !important;
 }
 
 .burger-link {
@@ -99,15 +105,16 @@
   }
 
   .burger__menu {
-    margin-top: 144px;
+     margin-top: 145px !important;  
+    gap: 18px;
+  }
+
+  .burger__button_account {
+    margin-bottom: 43px;
   }
 
   .burger__close-btn {
     top: 13px;
     right: 13px;
-  }
-
-  .burger__button_account {
-    margin-bottom: 45px;
   }
 }
