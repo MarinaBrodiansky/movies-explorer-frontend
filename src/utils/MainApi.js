@@ -76,7 +76,7 @@ class MainApi {
 }
 
 export const mainApi = (token) => new MainApi({
-  url: process.env.REACT_APP_API_ULR || 'http://localhost:3000',
+  url: process.env.REACT_APP_API_URL || 'http://localhost:3000',
   headers: {
     'Content-Type': 'application/json',
     'Authorization': `Bearer ${token}`
