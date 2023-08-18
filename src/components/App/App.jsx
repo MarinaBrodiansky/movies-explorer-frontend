@@ -52,6 +52,7 @@ const App = () => {
   const [loggedIn, setLoggedIn] = useState(false);
   const [isLoading, setLoading] = useState(true);
   const [isSpinner, setSpinner] = useState(false);
+  const [isProfileSaved, setIsProfileSaved] = useState(false);
   const [movies, setMovies] = useState([]);
   const [savedMovies, setSavedMovies] = useState([]);
   const [requestErrors, setRequestErrors] = useState(defaultStateRequestErrors);
@@ -87,7 +88,7 @@ const App = () => {
     }
 
     setLoading(false);
-  }, []);
+  }, [loggedIn, token]);
 
   useEffect(() => {
     setRequestErrors(defaultStateRequestErrors);
@@ -95,6 +96,13 @@ const App = () => {
 
   useEffect(() => {
     if (loggedIn) {
+      if (!user) {
+        setLoading(true);
+        auth(token).me().then(user => {
+          setUser(user);
+        }).finally(() => setLoading(false))
+      }
+
       const localMovies = parseJSON(localStorage.getItem(MOVIES_KEY), []);
 
       if (Array.isArray(localMovies) && localMovies.length) {
@@ -205,9 +213,11 @@ const App = () => {
    */
   const handleUpdateUser = async payload => {
     try {
+      setIsProfileSaved(false);
       setSpinner(true);
       const user = await auth(token).update(payload);
       setUser(user);
+      setIsProfileSaved(true);
     } catch (e) {
       setRequestErrors({ ...requestErrors, profile: e });
     } finally {
@@ -309,6 +319,8 @@ const App = () => {
                 element={
                   <ProtectedRoute
                     component={Profile}
+                    isProfileSaved={isProfileSaved}
+                    setIsProfileSaved={setIsProfileSaved}
                     loggedIn={loggedIn}
                     onSignOut={handleSignOut}
                     onUpdateUser={handleUpdateUser}

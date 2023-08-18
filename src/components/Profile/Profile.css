@@ -109,6 +109,13 @@ textarea:focus {
   opacity: 0.8;
 }
 
+.profile__success {
+  text-align: center;
+  background-color: #00ff783d;
+  padding: 4px;
+  border-radius: 4px;
+}
+
 @media screen and (max-width: 768px) {
   .profile {
     margin: 245px auto 0;

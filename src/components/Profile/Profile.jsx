@@ -4,8 +4,15 @@ import { validateName, validateEmail } from '../../utils/validate';
 import { useContext, useEffect, useState } from 'react';
 import { CurrentUserContext } from '../../state/user';
 
-const Profile = ({ onUpdateUser, onSignOut, requestErrors }) => {
+const Profile = ({
+  onUpdateUser,
+  onSignOut,
+  requestErrors,
+  isProfileSaved,
+  setIsProfileSaved,
+}) => {
   const { user } = useContext(CurrentUserContext);
+  console.log({user})
   const [edit, setStateEdit] = useState(false);
   const { values, handleChange, errors, isValid, setValues, setIsValid } =
     useFormValidate();
@@ -53,7 +60,6 @@ const Profile = ({ onUpdateUser, onSignOut, requestErrors }) => {
               type="email"
               name="email"
               className="profile__input"
-              placeholder="email"
               disabled={!edit}
               value={values.email || ''}
               onChange={handleChange}
@@ -70,6 +76,11 @@ const Profile = ({ onUpdateUser, onSignOut, requestErrors }) => {
                 : requestErrors.profile.message
               : ''}
           </div>
+          {isProfileSaved ? (
+            <div className="profile__success">Профиль успешно обновлен!</div>
+          ) : (
+            ''
+          )}
           <div className="profile__bottom">
             {edit ? (
               <button
@@ -89,6 +100,7 @@ const Profile = ({ onUpdateUser, onSignOut, requestErrors }) => {
                 <button
                   onClick={e => {
                     e.preventDefault();
+                    setIsProfileSaved(false);
                     setStateEdit(true);
                   }}
                   className="profile__button-edit"
