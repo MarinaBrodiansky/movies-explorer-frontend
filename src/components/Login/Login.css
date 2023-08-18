@@ -121,7 +121,7 @@ textarea:focus {
   }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 425px) {
   .login__title {
     margin: 0;
   }

@@ -99,7 +99,7 @@ div.burger {
   }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 425px) {
   .burger__container {
     width: 100%;
   }

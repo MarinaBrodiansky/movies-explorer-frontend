@@ -1,5 +1,6 @@
 import './MoviesCard.css'
 import cross from '../../images/cross.svg'
+import { getMoviesTime } from '../../utils/helpers'
 import { MOVIE_URL } from '../../utils/MoviesApi'
 
 const MoviesCard = ({
@@ -16,7 +17,7 @@ const MoviesCard = ({
         <div className="card__header">
           <div className="card__description row">
             <h2 className="card__name">{movie.nameRU}</h2>
-            <span className="card__duration">{movie.duration}</span>
+            <span className="card__duration">{getMoviesTime(movie.duration)}</span>
           </div>
           <div className='row'>
           {isShowSaveBtn && (

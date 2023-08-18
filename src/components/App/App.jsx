@@ -309,7 +309,6 @@ const App = () => {
                 element={
                   <ProtectedRoute
                     component={Profile}
-                    user={user}
                     loggedIn={loggedIn}
                     onSignOut={handleSignOut}
                     onUpdateUser={handleUpdateUser}

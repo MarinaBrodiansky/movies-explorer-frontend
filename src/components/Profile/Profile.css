@@ -123,7 +123,7 @@ textarea:focus {
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 425px) {
   .profile {
     width: calc(100% - 60px);
     margin: 80px auto 0;

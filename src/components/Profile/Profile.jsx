@@ -1,20 +1,21 @@
-import './Profile.css'
-import { useFormValidate } from '../../hooks/useFormValidate'
-import { validateName, validateEmail } from '../../utils/validate'
-import { useEffect, useState } from 'react'
+import './Profile.css';
+import { useFormValidate } from '../../hooks/useFormValidate';
+import { validateName, validateEmail } from '../../utils/validate';
+import { useContext, useEffect, useState } from 'react';
+import { CurrentUserContext } from '../../state/user';
 
-
-const Profile = ({ user, onUpdateUser, onSignOut, requestErrors }) => {
-  const [edit, setStateEdit] = useState(false)
+const Profile = ({ onUpdateUser, onSignOut, requestErrors }) => {
+  const { user } = useContext(CurrentUserContext);
+  const [edit, setStateEdit] = useState(false);
   const { values, handleChange, errors, isValid, setValues, setIsValid } =
-    useFormValidate()
+    useFormValidate();
 
   useEffect(() => {
     if (user) {
-      setValues(user)
-      setIsValid(true)
+      setValues(user);
+      setIsValid(true);
     }
-  }, [user, setValues, setIsValid])
+  }, [user, setValues, setIsValid]);
 
   return (
     <>
@@ -22,9 +23,9 @@ const Profile = ({ user, onUpdateUser, onSignOut, requestErrors }) => {
         <h1 className="profile__title">Привет, {values.name}!</h1>
         <form
           onSubmit={e => {
-            e.preventDefault()
-            onUpdateUser(values)
-            setStateEdit(false)
+            e.preventDefault();
+            onUpdateUser(values);
+            setStateEdit(false);
           }}
           className="profile__form form"
         >
@@ -87,8 +88,8 @@ const Profile = ({ user, onUpdateUser, onSignOut, requestErrors }) => {
               <>
                 <button
                   onClick={e => {
-                    e.preventDefault()
-                    setStateEdit(true)
+                    e.preventDefault();
+                    setStateEdit(true);
                   }}
                   className="profile__button-edit"
                 >
@@ -103,7 +104,7 @@ const Profile = ({ user, onUpdateUser, onSignOut, requestErrors }) => {
         </form>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default Profile
+export default Profile;

@@ -24,6 +24,7 @@ const Movies = ({
   const [search, setSearch] = useState(
     parseJSON(localStorage.getItem(MOVIES_SEARCH_KEY), RESET_SEARCH_STATE),
   )
+  const [isSearch, setIsSearch] = useState('s' in search && search.s.length)
   const [page, setPage] = useState(
     Number(localStorage.getItem(MOVIES_PAGE_KEY)),
   )
@@ -49,6 +50,7 @@ const Movies = ({
           searchDefaultState={search}
           onSearch={search => {
             setPage(0)
+            setIsSearch(true)
             filterSearch({ movies, search, setFiltredMovies })
           }}
         />
@@ -56,6 +58,7 @@ const Movies = ({
         <MoviesCardList
           isSavedMoviesPage={false}
           movies={filtredMovies}
+          isSearch={isSearch}
           page={page}
           setPage={setPage}
           onSaveMovie={onSaveMovie}

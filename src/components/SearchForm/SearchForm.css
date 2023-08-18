@@ -55,7 +55,6 @@
 .search__input:focus,
 textarea:focus {
   outline: none;
-  /* box-shadow: 0 0 2px 2px #555; */
 }
 
 .search__button {
@@ -110,7 +109,7 @@ textarea:focus {
 
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 425px) {
   .search {
     padding: 90px 10px 0px;
   }

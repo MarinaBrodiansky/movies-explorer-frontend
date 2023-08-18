@@ -12,12 +12,13 @@ import './SavedMovies.css'
 const SavedMovies = ({ movies, onDeleteMovie, requestErrors }) => {
   const [filtredMovies, setFiltredMovies] = useState(movies)
   const [search, setSearch] = useState(RESET_SEARCH_STATE)
+  const [isSearch, setIsSearch] = useState(true)
   const [page, setPage] = useState(
     Number(localStorage.getItem(MOVIES_SAVED_PAGE_KEY)),
   )
 
   useEffect(() => {
-    setFiltredMovies(movies)
+    filterSearch({ movies, search, setFiltredMovies })
   }, [movies])
 
   useEffect(() => {
@@ -33,12 +34,14 @@ const SavedMovies = ({ movies, onDeleteMovie, requestErrors }) => {
             searchDefaultState={search}
             onSearch={search => {
               setPage(0)
+              setIsSearch(true)
               filterSearch({ movies, search, setFiltredMovies })
             }}
           />
           <MoviesCardList
             movies={filtredMovies}
             page={page}
+            isSearch={isSearch}
             setPage={setPage}
             savedMovies={movies}
             isShowSaveBtn={false}
