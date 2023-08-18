@@ -6,6 +6,7 @@ const NotFoundPage = () => {
   const navigate = useNavigate();
 
   const handleGoBack = () => {
+    console.log('go back')
     navigate(-1);
   };
 

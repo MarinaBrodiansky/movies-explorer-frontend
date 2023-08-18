@@ -73,7 +73,7 @@ const App = () => {
         const user = await auth(token).me();
         setUser(user);
         setLoggedIn(true);
-        navigate(`${location.pathname}${location.search}`);
+        navigate(`${location.pathname}${location.search}`, { replace: true });
       } catch (e) {
         if (e.status === 404) {
           localStorage.removeItem(JWT_TOKEN_KEY);
