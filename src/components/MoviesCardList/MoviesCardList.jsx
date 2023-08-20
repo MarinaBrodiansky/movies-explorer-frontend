@@ -20,11 +20,11 @@ const MoviesCardList = ({
   const [count, plus] = maxMoviesByWidth(width);
   const showedMovies = useMemo(() => {
     if (Array.isArray(movies)) {
-      return isSavedMoviesPage ? movies : movies.slice(0, count + page);
+      return isSavedMoviesPage ? movies : movies.slice(0, count + (plus * page));
     }
 
     return [];
-  }, [movies, page, count, isSavedMoviesPage]);
+  }, [movies, page, plus, count, isSavedMoviesPage]);
 
   const movieIsSaved = ({ id }) => {
     if (Array.isArray(savedMovies)) {
@@ -86,7 +86,7 @@ const MoviesCardList = ({
       </ul>
       { isSearch && isShowMoreButton(movies, showedMovies) ? (
         <button
-          onClick={() => setPage(prev => prev + plus)}
+          onClick={() => setPage(prev => ++prev)}
           className="cards__button"
           type="button"
         >

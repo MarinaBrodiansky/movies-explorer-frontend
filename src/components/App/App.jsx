@@ -8,7 +8,6 @@ import {
   JWT_TOKEN_KEY,
   MOVIES_KEY,
   MOVIES_PAGE_KEY,
-  MOVIES_SAVED_PAGE_KEY,
   MOVIES_SEARCH_KEY,
   FILTRED_MOVIES_KEY,
   RESET_SEARCH_STATE,
@@ -193,7 +192,6 @@ const App = () => {
       setToken('');
       setLoggedIn(false);
       localStorage.setItem(MOVIES_PAGE_KEY, '0');
-      localStorage.setItem(MOVIES_SAVED_PAGE_KEY, '0');
       localStorage.setItem(MOVIES_KEY, JSON.stringify([]));
       localStorage.setItem(SAVED_MOVIES_KEY, JSON.stringify([]));
       localStorage.setItem(FILTRED_MOVIES_KEY, JSON.stringify([]));

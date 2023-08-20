@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { MOVIES_SAVED_PAGE_KEY, RESET_SEARCH_STATE } from '../../constants'
+import { RESET_SEARCH_STATE } from '../../constants'
 import { filterSearch } from '../../utils/search'
 import MoviesCardList from '../MoviesCardList/MoviesCardList'
 import SearchForm from '../SearchForm/SearchForm'
@@ -13,17 +13,11 @@ const SavedMovies = ({ movies, onDeleteMovie, requestErrors }) => {
   const [filtredMovies, setFiltredMovies] = useState(movies)
   const [search, setSearch] = useState(RESET_SEARCH_STATE)
   const [isSearch, setIsSearch] = useState(true)
-  const [page, setPage] = useState(
-    Number(localStorage.getItem(MOVIES_SAVED_PAGE_KEY)),
-  )
+  const [page, setPage] = useState(0)
 
   useEffect(() => {
     filterSearch({ movies, search, setFiltredMovies })
   }, [movies])
-
-  useEffect(() => {
-    localStorage.setItem(MOVIES_SAVED_PAGE_KEY, page)
-  }, [page])
 
   return (
     <>
