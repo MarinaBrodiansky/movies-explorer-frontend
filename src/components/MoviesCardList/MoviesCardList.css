@@ -6,13 +6,13 @@
 
 .cards__list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(270px, 364px));
   column-gap: 24px;
   max-width: 1140px;
   row-gap: 27px;
   justify-content: center;
   padding: 0;
-  margin: 70px auto;
+  margin: 46px auto;
 }
 
 .cards__button {
@@ -50,38 +50,45 @@
   align-items: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .cards {
     display: block;
     margin: 0 30px 0 30px;
     text-align: center;
   }
-
+  
   .cards__list {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 339px));
-    row-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(339px, 339px));
+    row-gap: 38px;
     column-gap: 30px;
     margin: auto;
   }
-
+  
   .cards__button {
-    margin: 60px auto 0 auto;
+    margin: 80px auto 0 auto;
   }
 }
 
 @media screen and (max-width: 425px) {
   .cards {
-    margin: 0 10px 80px;
+    margin: 0 10px 0;
     min-height: 587px;
   }
 
   .cards__list {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
     row-gap: 16px;
-    margin: 50px auto 0 auto;
+    margin: 20px auto 0 auto;
   }
 
   .cards__button {
     max-width: 240px;
-    margin: 73px auto 25px auto;
+    margin: 77px auto 25px auto;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .cards__list {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
   }
 }

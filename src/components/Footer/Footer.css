@@ -1,6 +1,7 @@
 .footer {
   background: #fafafa;
-  padding: 59px 70px 44px;
+  padding: 70px 70px 58px;
+  /* padding: 59px 70px 44px; */
   font-weight: 400;
   font-size: 13px;
   margin-top: auto;
@@ -52,7 +53,7 @@
 
 @media screen and (max-width: 768px) {
   .footer {
-    padding: 60px 25px 25px 37px;
+    padding: 76px 25px 25px 37px;
     margin: 0;
     background: none;
   }

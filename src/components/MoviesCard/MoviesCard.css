@@ -218,7 +218,7 @@
 }
 
 .card .col:nth-child(2) {
-  flex: 0 1 208px;
+  flex: 0 1 205px;
   align-self: stretch;
 }
 
@@ -250,13 +250,18 @@
     width: 339px;
     height: 190px;
   }
+  
+.card .col:nth-child(2) {
+  flex: 0 1 190px;
+}
+  
 }
 
 @media screen and (max-width: 425px) {
   .card {
     width: 300px;
   }
-
+  
   .card .col:nth-child(2) {
     flex: 0 1 170px;
   }
@@ -273,5 +278,11 @@
 
   .card__button {
     margin: 19px 14px 0 0;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .card {
+    width: 300px;
   }
 }

@@ -104,12 +104,12 @@ textarea:focus {
   }
 
   .search hr {
-    margin: 110px 0 80px 0;
+    margin: 86px 0 80px 0;
   }
 
 }
 
-@media screen and (max-width: 670px) {
+@media screen and (max-width: 767px) {
   .search {
     padding: 90px 10px 0px;
   }
