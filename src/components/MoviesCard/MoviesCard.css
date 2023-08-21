@@ -15,7 +15,7 @@
   object-fit: cover;
   background-position: center;
   width: 100%;
-  height: 220px;
+  height: 205px;
   transition: all 0.26s cubic-bezier(0.22, 0.61, 0.36, 1);
   filter: sepia(0.4) blur(1px);
 }
@@ -241,23 +241,31 @@
   padding: 2px 5px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1280px) {
   .card {
-    width: 339px;
+    width: 364px;
   }
 
   .card__image {
-    width: 339px;
-    height: 190px;
+    width: 364px;
+    height: 205px
   }
-  
-.card .col:nth-child(2) {
-  flex: 0 1 190px;
-}
-  
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 1279px) {
+  .card .col:nth-child(2) {
+    flex: 0 1 190px;
+  }
+  .card {
+    width: 339px;
+  }
+  .card__image {
+    width: 339px;
+    height: 190px
+  }
+}
+
+@media screen and (max-width: 680px) {
   .card {
     width: 300px;
   }

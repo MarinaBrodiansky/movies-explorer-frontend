@@ -6,10 +6,10 @@
 
 .cards__list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(270px, 364px));
+  grid-template-columns: repeat(auto-fill, minmax(364px, 364px));
   column-gap: 24px;
   max-width: 1140px;
-  row-gap: 27px;
+  row-gap: 30px;
   justify-content: center;
   padding: 0;
   margin: 46px auto;
@@ -27,7 +27,7 @@
   padding: 11px 0 9px;
   cursor: pointer;
   transition: .3s ease;
-  margin: auto;
+  margin: 34px auto 0 auto;
 }
 
 .cards__button:hover {
@@ -50,10 +50,21 @@
   align-items: center;
 }
 
+@media screen and (max-width: 1279px) {
+  .cards__list {
+    row-gap: 38px;
+    column-gap: 30px;
+    margin: auto;
+  }
+  .cards {
+    margin: 0 70px 0;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .cards {
     display: block;
-    margin: 0 30px 0 30px;
+    margin: 0 10px 0;
     text-align: center;
   }
   
@@ -69,26 +80,35 @@
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   .cards {
-    margin: 0 10px 0;
+    margin: 32px 30px 0;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .cards {
+    margin: 32px 30px 0;
     min-height: 587px;
   }
 
   .cards__list {
     grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
-    row-gap: 16px;
-    margin: 20px auto 0 auto;
+    row-gap: 30px;
   }
 
   .cards__button {
     max-width: 240px;
-    margin: 77px auto 25px auto;
+    margin: 78px auto 28px auto;
   }
 }
 
 @media screen and (max-width: 320px) {
+  .cards {
+    margin: 51px 10px 0;
+  }
   .cards__list {
     grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
+    row-gap: 16px;
   }
 }

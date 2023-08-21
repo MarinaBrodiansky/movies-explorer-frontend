@@ -86,32 +86,43 @@ textarea:focus {
 .search hr {
   border: none;
   border-top: 1px solid #f1f1f1;
-  margin: 69px 0 10px 0;
+  margin: 44px 0 34px 0;
 }
 
-@media screen and (max-width: 768px) {
-  .search {
-    padding: 89px 30px 0;
-  }
-
+@media screen and (max-width: 1280px) {
   .search__form {
-    padding: 0 20px 0px 24px;
+    padding: 0 29px 0px 24px;
     flex-wrap: wrap;
   }
 
   .search__button {
-    margin: 0px 19px 0px 0px;
+    margin: 0px 30px 0px 0px;
   }
 
   .search hr {
-    margin: 86px 0 80px 0;
+    margin: 44px 0 34px 0;
   }
 
 }
 
+@media screen and (max-width: 1279px) {
+  .search hr {
+    margin: 84px 0 50px 0;
+  }
+  .search {
+    padding: 89px 30px 0;
+  }
+  .search__form {
+    padding: 0px 19px 0px 25px;
+  }
+  .search__button {
+    margin: 0px 20px 0px 0px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .search {
-    padding: 90px 10px 0px;
+    padding: 87px 10px 0;
   }
 
   .search__form {
@@ -148,6 +159,6 @@ textarea:focus {
   }
 
   .search hr {
-    margin: 108px 0 0 0;
+    margin: 83px 0 0 0;
   }
 }

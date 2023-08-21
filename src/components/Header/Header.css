@@ -16,7 +16,7 @@
   opacity: 0.8;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1279px) {
   .header {
     padding-left: 30px;
     padding-right: 30px;
@@ -24,7 +24,7 @@
 }
 
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 767px) {
   .header {
     padding-left: 14px;
     padding-right: 14px;
