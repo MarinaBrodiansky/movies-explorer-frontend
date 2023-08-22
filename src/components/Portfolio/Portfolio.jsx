@@ -9,7 +9,7 @@ const Portfolio = () => {
           <a
             className="portfolio__link"
             rel="noreferrer"
-            href="https://github.com/MarinaBrodiansky//how-to-learn"
+            href="https://github.com/MarinaBrodiansky/how-to-learn"
             target="_blank"
           >
             Статичный сайт
