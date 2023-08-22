@@ -10,7 +10,7 @@
 
 @media screen and (max-width: 768px) {
   .saved-movies__content {
-    margin-bottom: 140px;
+    margin-bottom: 150px;
   }
   .saved-movies {
     /* min-height: 1056px; */
