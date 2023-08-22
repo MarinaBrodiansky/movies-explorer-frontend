@@ -9,7 +9,7 @@ const Portfolio = () => {
           <a
             className="portfolio__link"
             rel="noreferrer"
-            href="https://github.com/"
+            href="https://github.com/MarinaBrodiansky//how-to-learn"
             target="_blank"
           >
             Статичный сайт
@@ -20,7 +20,7 @@ const Portfolio = () => {
           <a
             className="portfolio__link"
             rel="noreferrer"
-            href="https://github.com/"
+            href="https://github.com/MarinaBrodiansky/russian-travel"
             target="_blank"
           >
             Адаптивный сайт
@@ -31,7 +31,7 @@ const Portfolio = () => {
           <a
             className="portfolio__link"
             rel="noreferrer"
-            href="https://github.com/"
+            href="https://github.com/MarinaBrodiansky/react-mesto-api-full-gha"
             target="_blank"
           >
             Одностраничное приложение

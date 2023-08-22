@@ -36,7 +36,7 @@ const Register = ({ onSignUp, requestErrors }) => {
           name="name"
           value={values.name || ''}
           onChange={handleChange}
-          minLength={6}
+          minLength={2}
           maxLength={40}
           required
         />

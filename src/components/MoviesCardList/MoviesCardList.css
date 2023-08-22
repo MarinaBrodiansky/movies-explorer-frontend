@@ -27,7 +27,7 @@
   padding: 11px 0 9px;
   cursor: pointer;
   transition: .3s ease;
-  margin: 34px auto 0 auto;
+  margin: 34px auto 10px auto;
 }
 
 .cards__button:hover {
@@ -76,7 +76,7 @@
   }
   
   .cards__button {
-    margin: 80px auto 0 auto;
+    margin: 80px auto 80px auto;
   }
 }
 

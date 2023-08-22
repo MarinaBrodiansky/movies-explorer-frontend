@@ -1,5 +1,5 @@
 .saved-movies {
-  min-height: 748px;
+  /* min-height: 748px; */
 }
 
 .saved-movies__content {
@@ -13,7 +13,7 @@
     margin-bottom: 140px;
   }
   .saved-movies {
-    min-height: 1056px;
+    /* min-height: 1056px; */
   }
 }
 
@@ -22,6 +22,6 @@
     margin-bottom: 115px;
   }
   .saved-movies {
-    min-height: 925px;
+    /* min-height: 925px; */
   }
 }
