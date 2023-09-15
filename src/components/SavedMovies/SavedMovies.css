@@ -1,0 +1,27 @@
+.saved-movies {
+  /* min-height: 748px; */
+}
+
+.saved-movies__content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .saved-movies__content {
+    margin-bottom: 150px;
+  }
+  .saved-movies {
+    /* min-height: 1056px; */
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .saved-movies__content {
+    margin-bottom: 115px;
+  }
+  .saved-movies {
+    /* min-height: 925px; */
+  }
+}

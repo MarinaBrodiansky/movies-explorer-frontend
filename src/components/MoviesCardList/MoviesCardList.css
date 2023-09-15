@@ -1,0 +1,114 @@
+.cards {
+  display: block;
+  margin: 0 70px 65px 70px;
+  text-align: center;
+}
+
+.cards__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(364px, 364px));
+  column-gap: 24px;
+  max-width: 1140px;
+  row-gap: 30px;
+  justify-content: center;
+  padding: 0;
+  margin: 46px auto;
+}
+
+.cards__button {
+  width: 100%;
+  max-width: 320px;
+  border: #E8E8E8 solid 1px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  background-color: #FFFFFF;
+  padding: 11px 0 9px;
+  cursor: pointer;
+  transition: .3s ease;
+  margin: 34px auto 0 auto;
+}
+
+.cards__button:hover {
+  opacity: 0.8;
+  background: #2be080;
+  color: #ffff;
+}
+
+.cards__not-found {
+  text-align: center;
+  grid-area: 1/2;
+}
+
+.cards__request-error {
+  display: flex;
+  line-height: 20px;
+  color: crimson;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (max-width: 1279px) {
+  .cards__list {
+    row-gap: 38px;
+    column-gap: 30px;
+    margin: auto;
+  }
+  .cards {
+    margin: 0 70px 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .cards {
+    display: block;
+    margin: 0 10px 0;
+    text-align: center;
+  }
+  
+  .cards__list {
+    grid-template-columns: repeat(auto-fit, minmax(339px, 339px));
+    row-gap: 38px;
+    column-gap: 30px;
+    margin: auto;
+  }
+  
+  .cards__button {
+    margin: 80px auto 60px auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cards {
+    margin: 32px 30px 0;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .cards {
+    margin: 32px 30px 0;
+    min-height: 587px;
+  }
+
+  .cards__list {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
+    row-gap: 30px;
+  }
+
+  .cards__button {
+    max-width: 240px;
+    margin: 78px auto 28px auto;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .cards {
+    margin: 51px 10px 0;
+  }
+  .cards__list {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
+    row-gap: 16px;
+  }
+}

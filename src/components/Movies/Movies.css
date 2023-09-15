@@ -1,0 +1,23 @@
+.movies {
+  display: flex;
+  flex-direction: column;
+  /* min-height: 1675px; */
+}
+
+.movies__content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 0;
+}
+
+.movies__message {
+  text-align: center;
+  padding: 40px 0;
+}
+
+@media screen and (max-width: 768px){
+  .movies {
+    /* min-height: 1670px; */
+  }
+}
